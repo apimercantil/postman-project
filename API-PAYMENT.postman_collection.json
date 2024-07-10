@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "4442211b-a8ea-4015-8e08-cd454948ccc1",
+		"name": "API-PAYMENT-GITHUB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34100237"
+	},
+	"item": [
+		{
+			"name": "c2p",
+			"item": [
+				{
+					"name": "compra",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\":123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\", \r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transaction_c2p\": {\r\n        \"amount\": 1.00,\r\n        \"currency\": \"ves\",\r\n        \"destination_bank_id\": \"\",\r\n        \"destination_id\": \"\", // encriptado\r\n        \"destination_mobile_number\": \"\", // encriptado\r\n        \"origin_mobile_number\": \"\",\r\n        \"payment_reference\": \"\",\r\n        \"trx_type\": \"compra\",\r\n        \"payment_method\": \"c2p\",\r\n        \"invoice_number\": \"\",\r\n        \"twofactor_auth\": \"\" // encriptado\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/c2p",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"c2p"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vuelto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\":123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\", \r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transaction_c2p\": {\r\n        \"amount\": 1.00,\r\n        \"currency\": \"ves\",\r\n        \"destination_bank_id\": \"\",\r\n        \"destination_id\": \"\", // encriptado\r\n        \"destination_mobile_number\": \"\", // encriptado\r\n        \"origin_mobile_number\": \"\",\r\n        \"payment_reference\": \"\",\r\n        \"trx_type\": \"vuelto\",\r\n        \"payment_method\": \"p2p\",\r\n        \"invoice_number\": \"\",\r\n        \"twofactor_auth\": \"\" // encriptado\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/c2p",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"c2p"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "anulacion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\":123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\", \r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transaction_c2p\": {\r\n        \"amount\": 1.00,\r\n        \"currency\": \"ves\",\r\n        \"destination_bank_id\": \"\",\r\n        \"destination_id\": \"\", // encriptado\r\n        \"destination_mobile_number\": \"\", // encriptado\r\n        \"origin_mobile_number\": \"\",\r\n        \"payment_reference\": \"\",\r\n        \"trx_type\": \"compra\",\r\n        \"payment_method\": \"c2p\",\r\n        \"invoice_number\": \"\",\r\n        \"twofactor_auth\": \"\" // encriptado\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/c2p",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"c2p"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "scp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\": 123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\",\r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transaction_scpInfo\": {\r\n        \"destination_id\": \"\", // encriptado\r\n        \"destination_mobile_number\": \"\" // encriptado\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/mobile-payment/scp",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"mobile-payment",
+								"scp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search-c2p",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\": 123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\",\r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"search_by\": {\r\n        \"amount\": 1.00,\r\n        \"currency\": \"ves\",\r\n        \"destinantion_mobile_number\": \"\", // encriptado\r\n        \"origin_mobile_number\": \"\", // encriptado\r\n        \"payment_reference\": \"\",\r\n        \"trx_date\": \"\" \r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/mobile-payment/search",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"mobile-payment",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tarjetas",
+			"item": [
+				{
+					"name": "getauth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\":123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\", \r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transaction_authInfo\": {\r\n        \"trx_type\": \"solaut\",\r\n        \"payment_method\": \"tdd\",\r\n        \"customer_id\": \"\",\r\n        \"card_number\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/getauth",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"getauth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tdc",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-Id",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\":123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\", \r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transaction\": {\r\n        \"trx_type\": \"compra\",\r\n        \"payment_method\": \"tdc\",\r\n        \"customer_id\": \"\",\r\n        \"card_number\": \"\",\r\n        \"expiration_date\": \"\",\r\n        \"cvv\": \"\", //encriptado\r\n        \"invoice_number\": \"\",\r\n        \"currency\": \"ves\",\r\n        \"amount\": 5.00\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/pay",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tdd",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\":123456,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\", \r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transaction\": {\r\n        \"trx_type\": \"compra\",\r\n        \"payment_method\": \"tdc\",\r\n        \"customer_id\": \"\",\r\n        \"card_number\": \"\",\r\n        \"expiration_date\": \"\",\r\n        \"cvv\": \"\", //encriptado\r\n        \"twofactor_auth\": \"\", // encriptado\r\n        \"account_type\": \"cc\",\r\n        \"invoice_number\": \"\",\r\n        \"currency\": \"ves\",\r\n        \"amount\": 5.00\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/pay",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "td-search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchant_identify\": {\r\n        \"integratorId\": \"31\",\r\n        \"merchantId\": \"123456\",\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"client_identify\": {\r\n        \"ipaddress\": \"127.0.0.1\",\r\n        \"browser_agent\": \"Chrome 18.1.3\",\r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\",\r\n            \"model\": \"S9\",\r\n            \"os_version\": \"Oreo 9.1\",\r\n            \"location\": {\r\n                \"lat\": 37.422476,\r\n                \"lng\": 122.08425\r\n            }\r\n        }\r\n    },\r\n    \"search_by\": {\r\n        \"search_criteria\": \"unique\",\r\n        \"procesing_date\": \"\",\r\n        \"invoice_number\": \"\",\r\n        \"payment_reference\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/search",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transferencias",
+			"item": [
+				{
+					"name": "transfer-search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-IBM-Client-ID",
+								"value": "cambiame",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// RECUERDA CAMBIAR TU CLIENTID EN EL HEADER PARA PODER EJECUTAR ESTA COLECCIÓN\r\n{\r\n    \"merchantIdentify\": {\r\n        \"integratorId\": 31,\r\n        \"merchantId\":1234567,\r\n        \"terminalId\": \"abcde\"\r\n    },\r\n    \"clientIdentify\": {\r\n        \"ipAddress\": \"127.0.0.1\",\r\n        \"browserAgent\": \"Chrome 18.1.3\", \r\n        \"mobile\": {\r\n            \"manufacturer\": \"Samsung\"\r\n        }\r\n    },\r\n    \"transferSearchBy\": {\r\n            \"account\":  \"\", // encriptado\r\n            \"issuerCustomerId\": \"\", // encriptado\r\n            \"trxDate\": \"\",\r\n            \"issuerBankId\": \"\",\r\n            \"transactionType\": 1,\r\n            \"paymentReference\": \"\",\r\n            \"amount\": 5.00\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apimbu.mercantilbanco.com/mercantil-banco/sandbox/v1/payment/transfer-search",
+							"protocol": "https",
+							"host": [
+								"apimbu",
+								"mercantilbanco",
+								"com"
+							],
+							"path": [
+								"mercantil-banco",
+								"sandbox",
+								"v1",
+								"payment",
+								"transfer-search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
